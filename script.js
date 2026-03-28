@@ -18,14 +18,14 @@ let vehicleData = [
     "features": ["Sunroof","Apple CarPlay","Android Auto","LED Headlights","Cruise Control","Rear Camera","Climate Control","Push Start","Wireless Charging","Ventilated Seats"],
     "safety": ["6 Airbags","ABS + EBD","Lane Watch Camera","Vehicle Stability Assist","Hill Start Assist"],
     "images": [
-      "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&q=80",
-      "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=80",
-      "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80"
+      "https://imagecdnsa.zigwheels.ae/large/gallery/exterior/14/131/honda-city-front-angle-low-view-538576.jpg?tr=w-500,h-333",
+     "https://imgd-ct.aeplcdn.com/664x415/n/cw/ec/134287/city-exterior-right-front-three-quarter-2.png?isig=0&q=80",
+      "https://imgd-ct.aeplcdn.com/664x415/n/cw/ec/134287/city-exterior-left-rear-three-quarter.jpeg?isig=0&q=80"
     ],
     "views360": [
-      "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&q=80",
-      "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=80",
-      "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80"
+      "https://imagecdnsa.zigwheels.ae/large/gallery/exterior/14/131/honda-city-front-angle-low-view-538576.jpg?tr=w-500,h-333",
+      "https://imgd-ct.aeplcdn.com/664x415/n/cw/ec/134287/city-exterior-right-front-three-quarter-2.png?isig=0&q=80",
+     "https://imgd-ct.aeplcdn.com/664x415/n/cw/ec/134287/city-exterior-left-rear-three-quarter.jpeg?isig=0&q=80"
     ]
   },
   {
@@ -41,14 +41,14 @@ let vehicleData = [
     "features": ["4x4 Drive","Panoramic Sunroof","9-inch Touchscreen","360° Camera","Wireless Charging","Ventilated Seats","Ambient Lighting","Power Tailgate","Heads-Up Display","8 Airbags"],
     "safety": ["8 Airbags","ABS + EBD","Vehicle Stability Control","Hill Descent Control","Trailer Sway Control"],
     "images": [
-      "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&q=80",
-      "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&q=80",
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80"
+      "https://spn-sta.spinny.com/blog/20221202123514/Toyota-Fortuner-1160x653.webp?compress=true&quality=80&w=1200&dpr=2.6",
+      "https://media.zigcdn.com/media/model/2025/Jun/model-extimg-1146308685_600x400.jpg",
+      "https://cms-assets.autoscout24.com/uaddx06iwzdz/4CaY003mpVj2XrKYqJXqIj/b7ae7a2d8427d3a6fb3c2b49267cccc2/toyota-fortuner-back.jpeg?w=1100"
     ],
     "views360": [
-      "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&q=80",
-      "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&q=80",
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80"
+      "https://spn-sta.spinny.com/blog/20221202123514/Toyota-Fortuner-1160x653.webp?compress=true&quality=80&w=1200&dpr=2.6",
+      "https://media.zigcdn.com/media/model/2025/Jun/model-extimg-1146308685_600x400.jpg",
+      "https://cms-assets.autoscout24.com/uaddx06iwzdz/4CaY003mpVj2XrKYqJXqIj/b7ae7a2d8427d3a6fb3c2b49267cccc2/toyota-fortuner-back.jpeg?w=1100"
     ]
   },
   {
@@ -64,14 +64,14 @@ let vehicleData = [
     "features": ["Panoramic Sunroof","ADAS Suite","Bose Sound System","Dual Zone Climate","Wireless Charging","360° Camera","LED Headlights","Connected Car Tech","Drive Modes","Air Purifier"],
     "safety": ["6 Airbags","ABS + EBD","Electronic Stability Control","Forward Collision Warning","Lane Keep Assist"],
     "images": [
-      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&q=80",
-      "https://images.unsplash.com/photo-1542362567-b07e54358753?w=800&q=80",
-      "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=800&q=80"
+      "https://images.hindustantimes.com/auto/img/2024/07/26/600x338/Creta_3_1705469941498_1721984409750.jpg",
+      "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/creta-n-line/Interior/pc/front.jpg",
+      "https://jsvhyundai.com/public/assets/admin/images/gallery/Hyundai%20Creta%20Price.jpg"
     ],
     "views360": [
-      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&q=80",
-      "https://images.unsplash.com/photo-1542362567-b07e54358753?w=800&q=80",
-      "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=800&q=80"
+      "https://images.hindustantimes.com/auto/img/2024/07/26/600x338/Creta_3_1705469941498_1721984409750.jpg",
+      "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/creta-n-line/Interior/pc/front.jpg",
+      "https://jsvhyundai.com/public/assets/admin/images/gallery/Hyundai%20Creta%20Price.jpg"
     ]
   },
   {
@@ -87,14 +87,14 @@ let vehicleData = [
     "features": ["SmartPlay Pro+","Apple CarPlay","Android Auto","LED Headlights","Keyless Entry","Push Start","Rear Camera","Auto AC","Drive Modes","Height Adj. Seatbelt"],
     "safety": ["2 Airbags","ABS + EBD","Electronic Brake Force","Rear Parking Sensors","Speed Alert System"],
     "images": [
-      "https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800&q=80",
-      "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800&q=80",
-      "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80"
+      "https://imgd-ct.aeplcdn.com/664x415/n/cw/ec/159099/swift-exterior-left-front-three-quarter-26.jpeg?isig=0&q=80",
+      "https://imgd.aeplcdn.com/664x374/n/cw/ec/159099/swift-exterior-right-side-view.jpeg?isig=0&q=80",
+      "https://imgd.aeplcdn.com/664x374/n/cw/ec/159099/swift-exterior-right-rear-three-quarter.jpeg?isig=0&q=80"
     ],
     "views360": [
-      "https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800&q=80",
-      "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800&q=80",
-      "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80"
+      "https://imgd-ct.aeplcdn.com/664x415/n/cw/ec/159099/swift-exterior-left-front-three-quarter-26.jpeg?isig=0&q=80",
+      "https://imgd.aeplcdn.com/664x374/n/cw/ec/159099/swift-exterior-right-side-view.jpeg?isig=0&q=80",
+      "https://imgd.aeplcdn.com/664x374/n/cw/ec/159099/swift-exterior-right-rear-three-quarter.jpeg?isig=0&q=80"
     ]
   },
   {
@@ -110,14 +110,14 @@ let vehicleData = [
     "features": ["iDrive 8 System","Harman Kardon Sound","Heated Seats","Panoramic Sunroof","Wireless Charging","Head-Up Display","Driving Assistant Pro","Parking Assistant","Live Cockpit Pro","M Sport Package"],
     "safety": ["8 Airbags","ABS + DSC","Active Cruise Control","Lane Departure Warning","Collision Warning + Braking"],
     "images": [
-      "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&q=80",
-      "https://images.unsplash.com/photo-1523983388277-336a66bf9bcd?w=800&q=80",
-      "https://images.unsplash.com/photo-1617814076367-b759c7d7e738?w=800&q=80"
+      "https://mediapool.bmwgroup.com/cache/P9/202405/P90549624/P90549624-the-new-bmw-330i-sedan-exterior--interior-05-2024-600px.jpg",
+      "https://news-site-za.s3.af-south-1.amazonaws.com/images/2024/05/2024-3er-1.jpg",
+      "https://assets.meinauto.de/image/upload/v1716974134/website/pics/landingpages/news/2024-05/P90549622_highRes_the-new-bmw-330i-sed.jpg"
     ],
     "views360": [
-      "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&q=80",
-      "https://images.unsplash.com/photo-1523983388277-336a66bf9bcd?w=800&q=80",
-      "https://images.unsplash.com/photo-1617814076367-b759c7d7e738?w=800&q=80"
+      "https://mediapool.bmwgroup.com/cache/P9/202405/P90549624/P90549624-the-new-bmw-330i-sedan-exterior--interior-05-2024-600px.jpg",
+      "https://news-site-za.s3.af-south-1.amazonaws.com/images/2024/05/2024-3er-1.jpg",
+      "https://assets.meinauto.de/image/upload/v1716974134/website/pics/landingpages/news/2024-05/P90549622_highRes_the-new-bmw-330i-sed.jpg"
     ]
   },
   {
@@ -133,14 +133,14 @@ let vehicleData = [
     "features": ["10.25\" Touchscreen","JBL Sound System","Sunroof","ADAS","Wireless Charging","360° Camera","Air Purifier","Ventilated Seats","Connected Car","Ira Voice Assistant"],
     "safety": ["6 Airbags","ABS + EBD","Electronic Stability Program","Hill Hold Control","Front Fog Lamps"],
     "images": [
-      "https://images.unsplash.com/photo-1471444928139-48c5bf5173f8?w=800&q=80",
-      "https://images.unsplash.com/photo-1502877338535-766e1452684a?w=800&q=80",
-      "https://images.unsplash.com/photo-1546614042-7df3c24c9e5d?w=800&q=80"
+      "https://imgd.aeplcdn.com/370x208/n/cw/ec/176745/tata-nexon-right-front-three-quarter0.jpeg?isig=0&q=80",
+      "https://cdn-s3.autocarindia.com/Tata/nexon/_BE07493.JPG?w=640&q=75",
+      "https://imgd.aeplcdn.com/664x374/n/cw/ec/141867/nexon-facelift-exterior-left-rear-three-quarter.jpeg?isig=0&q=80"
     ],
     "views360": [
-      "https://images.unsplash.com/photo-1471444928139-48c5bf5173f8?w=800&q=80",
-      "https://images.unsplash.com/photo-1502877338535-766e1452684a?w=800&q=80",
-      "https://images.unsplash.com/photo-1546614042-7df3c24c9e5d?w=800&q=80"
+      "https://imgd.aeplcdn.com/370x208/n/cw/ec/176745/tata-nexon-right-front-three-quarter0.jpeg?isig=0&q=80",
+      "https://cdn-s3.autocarindia.com/Tata/nexon/_BE07493.JPG?w=640&q=75",
+      "https://imgd.aeplcdn.com/664x374/n/cw/ec/141867/nexon-facelift-exterior-left-rear-three-quarter.jpeg?isig=0&q=80"
     ]
   }
 ];
