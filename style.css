@@ -412,20 +412,28 @@ body::before {
 .auto-rotate-btn { display: flex; align-items: center; gap: 6px; padding: 0 0.8rem; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; width: auto; height: 34px; }
 .auto-rotate-btn.active { background: var(--accent-glow); border-color: var(--accent); color: var(--accent); }
 
+/* Canvas — fixed height, two image layers stacked */
 .view360-canvas {
-  position: relative; user-select: none; cursor: grab;
+  position: relative;
+  height: 300px;
+  user-select: none; cursor: grab;
   border-radius: var(--radius); overflow: hidden;
   background: linear-gradient(135deg, var(--bg-secondary), var(--bg-elevated));
   border: 1px solid var(--border);
 }
 .view360-canvas:active { cursor: grabbing; }
 
-#view360-img {
-  width: 100%;
-  height: 260px;           /* ← 360 VIEW HEIGHT */
-  object-fit: cover; display: block;
-  transition: opacity 0.15s ease; pointer-events: none;
+/* Both frame images fill the canvas and crossfade */
+.frame-img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
 }
+.frame-img.active { opacity: 1; }
 
 .drag-hint {
   position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%);
@@ -435,7 +443,7 @@ body::before {
 }
 
 .rotation-bar { margin-top: 0.75rem; height: 2px; background: var(--border); border-radius: 2px; overflow: hidden; }
-.rotation-fill { height: 100%; background: linear-gradient(90deg, var(--accent-dim), var(--accent)); border-radius: 2px; transition: width 0.15s ease; width: 0%; }
+.rotation-fill { height: 100%; background: linear-gradient(90deg, var(--accent-dim), var(--accent)); border-radius: 2px; transition: width 0.2s ease; width: 0%; }
 .frame-counter { margin-top: 0.4rem; display: flex; justify-content: space-between; font-size: 0.68rem; color: var(--text-muted); letter-spacing: 0.1em; }
 
 /* ── KEYBOARD HINT ────────────────────────── */
@@ -501,3 +509,4 @@ footer {
   #view360-img { height: 200px; }
   .main-image-wrap { max-height: 200px; }
 }
+
