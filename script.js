@@ -1,9 +1,9 @@
 /**
  * AutoArch — script.js
- * Search, display, 360° rotation — no backend needed
+ * Vehicle data + search + clean 360° crossfade viewer
  */
 
-/* ── INLINE VEHICLE DATA (no data.json needed) ── */
+/* ── VEHICLE DATA ── */
 let vehicleData = [
   {
     "company": "Honda", "model": "City", "year": "2024",
@@ -19,7 +19,7 @@ let vehicleData = [
     "safety": ["6 Airbags","ABS + EBD","Lane Watch Camera","Vehicle Stability Assist","Hill Start Assist"],
     "images": [
       "https://imagecdnsa.zigwheels.ae/large/gallery/exterior/14/131/honda-city-front-angle-low-view-538576.jpg?tr=w-500,h-333",
-     "https://imgd-ct.aeplcdn.com/664x415/n/cw/ec/134287/city-exterior-right-front-three-quarter-2.png?isig=0&q=80",
+      "https://imgd-ct.aeplcdn.com/664x415/n/cw/ec/134287/city-exterior-right-front-three-quarter-2.png?isig=0&q=80",
       "https://imgd-ct.aeplcdn.com/664x415/n/cw/ec/134287/city-exterior-left-rear-three-quarter.jpeg?isig=0&q=80"
     ],
     "views360": [
@@ -99,12 +99,11 @@ let vehicleData = [
       "https://imgd.aeplcdn.com/664x374/n/cw/ec/159099/swift-exterior-right-rear-three-quarter.jpeg?isig=0&q=80"
     ],
     "views360": [
-      
       "https://images.drivespark.com/ph-big/2024/05/2024-maruti-suzuki-swift-review_171583785860.jpg",
       "https://imgd-ct.aeplcdn.com/664x415/n/cw/ec/159099/swift-exterior-front-view.jpeg?isig=0&q=80",
       "https://imgd.aeplcdn.com/664x374/n/cw/ec/159099/swift-exterior-right-side-view.jpeg?isig=0&q=80",
       "https://imgd.aeplcdn.com/664x374/n/cw/ec/159099/swift-exterior-right-rear-three-quarter.jpeg?isig=0&q=80",
-   "https://imgd-ct.aeplcdn.com/664x415/n/cw/ec/159099/swift-exterior-left-rear-three-quarter.jpeg?isig=0&q=80"
+      "https://imgd-ct.aeplcdn.com/664x415/n/cw/ec/159099/swift-exterior-left-rear-three-quarter.jpeg?isig=0&q=80"
     ]
   },
   {
@@ -120,19 +119,15 @@ let vehicleData = [
     "features": ["iDrive 8 System","Harman Kardon Sound","Heated Seats","Panoramic Sunroof","Wireless Charging","Head-Up Display","Driving Assistant Pro","Parking Assistant","Live Cockpit Pro","M Sport Package"],
     "safety": ["8 Airbags","ABS + DSC","Active Cruise Control","Lane Departure Warning","Collision Warning + Braking"],
     "images": [
-
       "https://mediapool.bmwgroup.com/cache/P9/202405/P90549624/P90549624-the-new-bmw-330i-sedan-exterior--interior-05-2024-600px.jpg",
       "https://news-site-za.s3.af-south-1.amazonaws.com/images/2024/05/2024-3er-1.jpg",
       "https://assets.meinauto.de/image/upload/v1716974134/website/pics/landingpages/news/2024-05/P90549622_highRes_the-new-bmw-330i-sed.jpg"
     ],
     "views360": [
-      
       "https://mediapool.bmwgroup.com/cache/P9/202405/P90549624/P90549624-the-new-bmw-330i-sedan-exterior--interior-05-2024-600px.jpg",
       "https://imgd-ct.aeplcdn.com/664x415/n/cw/ec/198567/3-series-exterior-front-view.jpeg?isig=0&q=80",
       "https://www.netcarshow.com/BMW-3-Series_Sedan-2025-Rear_Three-Quarter.b4a8dfb8.jpg",
       "https://news-site-za.s3.af-south-1.amazonaws.com/images/2024/05/2024-3er-1.jpg"
-     
-    
     ]
   },
   {
@@ -163,11 +158,13 @@ let vehicleData = [
 
 /* ── STATE ── */
 let currentVehicle = null;
-let view360Index = 0;
-let autoRotateTimer = null;
-let isDragging = false;
-let dragStartX = 0;
-let dragFrameStart = 0;
+let currentFrame   = 0;
+let isDragging     = false;
+let startX         = 0;
+let autoRotate     = false;
+let autoInterval   = null;
+let activeImg, nextImg;
+let currentFrames  = [];
 
 /* ── DOM ── */
 const companyInput   = document.getElementById('company-input');
@@ -178,7 +175,7 @@ const notFound       = document.getElementById('not-found');
 const loadingOverlay = document.getElementById('loading-overlay');
 const mainImg        = document.getElementById('main-vehicle-img');
 const thumbStrip     = document.getElementById('thumb-strip');
-const view360Img     = document.getElementById('view360-img');
+const canvas         = document.getElementById('view360-canvas');
 const rotationFill   = document.getElementById('rotation-fill');
 const frameCounter   = document.getElementById('frame-counter');
 const dragHint       = document.getElementById('drag-hint');
@@ -186,7 +183,9 @@ const autoRotateBtn  = document.getElementById('auto-rotate-btn');
 const keyboardHint   = document.getElementById('keyboard-hint');
 
 /* ── INIT ── */
-async function init() {
+function init() {
+  activeImg = document.getElementById('view360-img');
+  nextImg   = document.getElementById('view360-img-b');
   console.log(`✅ ${vehicleData.length} vehicles ready`);
 }
 
@@ -230,17 +229,14 @@ function handleSearch() {
   }, 600);
 }
 
-/* ── RENDER ── */
+/* ── RENDER VEHICLE ── */
 function renderVehicle(v) {
   stopAutoRotate();
 
-  // Header
-  document.getElementById('v-company').textContent     = v.company;
-  document.getElementById('v-model').textContent       = v.model;
-  document.getElementById('v-year').textContent        = v.year ? `Model Year ${v.year}` : '';
-  document.getElementById('v-price').textContent       = v.price;
-
-  // Core specs
+  document.getElementById('v-company').textContent      = v.company;
+  document.getElementById('v-model').textContent        = v.model;
+  document.getElementById('v-year').textContent         = v.year ? `Model Year ${v.year}` : '';
+  document.getElementById('v-price').textContent        = v.price;
   document.getElementById('v-engine').textContent       = v.engine;
   document.getElementById('v-mileage').textContent      = v.mileage;
   document.getElementById('v-fuel').textContent         = v.fuel;
@@ -249,19 +245,15 @@ function renderVehicle(v) {
   document.getElementById('v-torque').textContent       = v.torque || '—';
   document.getElementById('v-seating').textContent      = v.seating || '5';
   document.getElementById('v-body').textContent         = v.body || '—';
-
-  // Extra details
-  document.getElementById('v-topspeed').textContent    = v.topspeed || '—';
+  document.getElementById('v-topspeed').textContent     = v.topspeed || '—';
   document.getElementById('v-acceleration').textContent = v.acceleration || '—';
-  document.getElementById('v-tank').textContent        = v.tank || '—';
-  document.getElementById('v-weight').textContent      = v.weight || '—';
-  document.getElementById('v-length').textContent      = v.length || '—';
-  document.getElementById('v-boot').textContent        = v.boot || '—';
-  document.getElementById('v-cooling').textContent     = v.cooling || '—';
-  document.getElementById('v-warranty').textContent    = v.warranty || '—';
-
-  // Description
-  document.getElementById('v-desc').textContent = v.description || '';
+  document.getElementById('v-tank').textContent         = v.tank || '—';
+  document.getElementById('v-weight').textContent       = v.weight || '—';
+  document.getElementById('v-length').textContent       = v.length || '—';
+  document.getElementById('v-boot').textContent         = v.boot || '—';
+  document.getElementById('v-cooling').textContent      = v.cooling || '—';
+  document.getElementById('v-warranty').textContent     = v.warranty || '—';
+  document.getElementById('v-desc').textContent         = v.description || '';
 
   // Tags
   const tagsEl = document.getElementById('v-tags');
@@ -274,14 +266,14 @@ function renderVehicle(v) {
     tagsEl.appendChild(tag);
   });
 
-  // Features list
+  // Features
   const featuresEl = document.getElementById('v-features');
   featuresEl.innerHTML = '';
   (v.features || []).forEach(f => {
     featuresEl.innerHTML += `<div class="feature-item"><div class="feature-dot"></div>${f}</div>`;
   });
 
-  // Safety list
+  // Safety
   const safetyEl = document.getElementById('v-safety');
   safetyEl.innerHTML = '';
   (v.safety || []).forEach(s => {
@@ -289,7 +281,7 @@ function renderVehicle(v) {
   });
 
   // NCAP stars
-  const starsEl = document.getElementById('v-stars');
+  const starsEl  = document.getElementById('v-stars');
   const ratingEl = document.getElementById('v-rating');
   const ncap = v.ncap || 0;
   starsEl.innerHTML = '';
@@ -298,8 +290,11 @@ function renderVehicle(v) {
   }
   ratingEl.textContent = `${ncap}/5`;
 
-  // Images
-  const imgs = v.images && v.images.length ? v.images : ['https://via.placeholder.com/800x450/1e1e26/4a4855?text=No+Image'];
+  // Gallery images
+  const imgs = v.images && v.images.length
+    ? v.images
+    : ['https://via.placeholder.com/800x450/1e1e26/4a4855?text=No+Image'];
+
   mainImg.src = imgs[0];
   mainImg.alt = `${v.company} ${v.model}`;
   document.getElementById('img-badge').textContent = `${v.company} · ${v.model}`;
@@ -319,86 +314,124 @@ function renderVehicle(v) {
     thumbStrip.appendChild(img);
   });
 
-  // 360 view
-  const frames = v.views360 && v.views360.length ? v.views360 : imgs;
-  view360Index = 0;
-  view360Img.dataset.frames = JSON.stringify(frames);
-  update360Frame(frames);
+  // Setup 360 frames
+  currentFrames = v.views360 && v.views360.length ? v.views360 : imgs;
+  currentFrame  = 0;
+
+  // Reset layers
+  activeImg = document.getElementById('view360-img');
+  nextImg   = document.getElementById('view360-img-b');
+  activeImg.classList.add('active');
+  nextImg.classList.remove('active');
+  nextImg.src = '';
+
+  // Preload all frames in background
+  currentFrames.forEach(src => { const p = new Image(); p.src = src; });
+
+  updateFrame(0);
 }
 
-/* ── 360° ── */
-function update360Frame(frames) {
-  if (!frames || !frames.length) return;
-  const idx = ((view360Index % frames.length) + frames.length) % frames.length;
-  view360Index = idx;
-  view360Img.style.opacity = '0.3';
-  view360Img.src = frames[idx];
-  view360Img.onload = () => { view360Img.style.opacity = '1'; };
-  rotationFill.style.width = ((idx / frames.length) * 100) + '%';
-  frameCounter.querySelector('span').textContent = `Frame ${idx + 1} / ${frames.length}`;
+/* ── 360 VIEWER ── */
+function updateFrame(index) {
+  if (!currentFrames.length) return;
+  index = ((index % currentFrames.length) + currentFrames.length) % currentFrames.length;
+  currentFrame = index;
+
+  nextImg.src = currentFrames[index];
+
+  const doSwap = () => {
+    nextImg.classList.add('active');
+    activeImg.classList.remove('active');
+    const tmp = activeImg;
+    activeImg = nextImg;
+    nextImg   = tmp;
+  };
+
+  if (nextImg.complete && nextImg.naturalWidth > 0) {
+    doSwap();
+  } else {
+    nextImg.onload = doSwap;
+  }
+
+  // Progress bar
+  rotationFill.style.width = ((index / currentFrames.length) * 100) + '%';
+
+  // Counter
+  const span = frameCounter ? frameCounter.querySelector('span') : null;
+  if (span) span.textContent = `Frame ${index + 1} / ${currentFrames.length}`;
 }
 
-function stepFrame(dir) {
-  const frames = JSON.parse(view360Img.dataset.frames || '[]');
-  if (!frames.length) return;
-  view360Index += dir;
-  update360Frame(frames);
-  dragHint.style.opacity = '0';
+function nextFrame() {
+  updateFrame(currentFrame + 1);
+  if (dragHint) dragHint.style.opacity = '0';
 }
 
+function prevFrame() {
+  updateFrame(currentFrame - 1);
+  if (dragHint) dragHint.style.opacity = '0';
+}
+
+/* ── AUTO ROTATE ── */
 function startAutoRotate() {
-  if (autoRotateTimer) return;
+  if (autoInterval) return;
+  autoRotate = true;
   autoRotateBtn.classList.add('active');
   autoRotateBtn.querySelector('span').textContent = 'STOP';
-  autoRotateTimer = setInterval(() => stepFrame(1), 120);
+  autoInterval = setInterval(nextFrame, 120);
 }
 
 function stopAutoRotate() {
-  if (!autoRotateTimer) return;
-  clearInterval(autoRotateTimer);
-  autoRotateTimer = null;
-  autoRotateBtn.classList.remove('active');
-  autoRotateBtn.querySelector('span').textContent = 'AUTO';
+  if (!autoInterval) return;
+  clearInterval(autoInterval);
+  autoInterval = null;
+  autoRotate   = false;
+  if (autoRotateBtn) {
+    autoRotateBtn.classList.remove('active');
+    autoRotateBtn.querySelector('span').textContent = 'AUTO';
+  }
 }
 
 function toggleAutoRotate() {
-  if (autoRotateTimer) stopAutoRotate(); else startAutoRotate();
+  if (autoRotate) stopAutoRotate(); else startAutoRotate();
 }
 
-/* ── DRAG ── */
-const canvas = document.getElementById('view360-canvas');
-
+/* ── DRAG (mouse) ── */
 canvas.addEventListener('mousedown', e => {
-  isDragging = true; dragStartX = e.clientX; dragFrameStart = view360Index; stopAutoRotate();
+  isDragging = true;
+  startX = e.clientX;
+  stopAutoRotate();
 });
-document.addEventListener('mousemove', e => {
+window.addEventListener('mouseup', () => { isDragging = false; });
+canvas.addEventListener('mousemove', e => {
   if (!isDragging) return;
-  const frames = JSON.parse(view360Img.dataset.frames || '[]');
-  if (!frames.length) return;
-  view360Index = dragFrameStart + Math.round((e.clientX - dragStartX) / (canvas.offsetWidth / frames.length));
-  update360Frame(frames);
-  dragHint.style.opacity = '0';
+  const diff = e.clientX - startX;
+  if (Math.abs(diff) > 18) {
+    diff > 0 ? nextFrame() : prevFrame();
+    startX = e.clientX;
+  }
 });
-document.addEventListener('mouseup', () => { isDragging = false; });
 
+/* ── DRAG (touch) ── */
 canvas.addEventListener('touchstart', e => {
-  isDragging = true; dragStartX = e.touches[0].clientX; dragFrameStart = view360Index; stopAutoRotate();
-}, { passive: true });
-canvas.addEventListener('touchmove', e => {
-  if (!isDragging) return;
-  const frames = JSON.parse(view360Img.dataset.frames || '[]');
-  if (!frames.length) return;
-  view360Index = dragFrameStart + Math.round((e.touches[0].clientX - dragStartX) / (canvas.offsetWidth / frames.length));
-  update360Frame(frames);
-  dragHint.style.opacity = '0';
+  isDragging = true;
+  startX = e.touches[0].clientX;
+  stopAutoRotate();
 }, { passive: true });
 canvas.addEventListener('touchend', () => { isDragging = false; });
+canvas.addEventListener('touchmove', e => {
+  if (!isDragging) return;
+  const diff = e.touches[0].clientX - startX;
+  if (Math.abs(diff) > 18) {
+    diff > 0 ? nextFrame() : prevFrame();
+    startX = e.touches[0].clientX;
+  }
+}, { passive: true });
 
 /* ── KEYBOARD ── */
 document.addEventListener('keydown', e => {
   if (!currentVehicle) return;
-  if (e.key === 'ArrowLeft')  stepFrame(-1);
-  if (e.key === 'ArrowRight') stepFrame(1);
+  if (e.key === 'ArrowRight') nextFrame();
+  if (e.key === 'ArrowLeft')  prevFrame();
   if (e.key === ' ') { e.preventDefault(); toggleAutoRotate(); }
 });
 
@@ -412,13 +445,13 @@ document.querySelectorAll('.suggestion-chip').forEach(chip => {
   });
 });
 
-/* ── EVENTS ── */
+/* ── WIRE UP BUTTONS ── */
 searchBtn.addEventListener('click', handleSearch);
 [companyInput, modelInput].forEach(input => {
   input.addEventListener('keydown', e => { if (e.key === 'Enter') handleSearch(); });
 });
-document.getElementById('btn-prev').addEventListener('click', () => stepFrame(-1));
-document.getElementById('btn-next').addEventListener('click', () => stepFrame(1));
+document.getElementById('btn-prev').addEventListener('click', prevFrame);
+document.getElementById('btn-next').addEventListener('click', nextFrame);
 autoRotateBtn.addEventListener('click', toggleAutoRotate);
 
 /* ── START ── */
