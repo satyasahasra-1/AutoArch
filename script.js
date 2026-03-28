@@ -23,9 +23,11 @@ let vehicleData = [
       "https://imgd-ct.aeplcdn.com/664x415/n/cw/ec/134287/city-exterior-left-rear-three-quarter.jpeg?isig=0&q=80"
     ],
     "views360": [
-      "https://imagecdnsa.zigwheels.ae/large/gallery/exterior/14/131/honda-city-front-angle-low-view-538576.jpg?tr=w-500,h-333",
-      "https://imgd-ct.aeplcdn.com/664x415/n/cw/ec/134287/city-exterior-right-front-three-quarter-2.png?isig=0&q=80",
-     "https://imgd-ct.aeplcdn.com/664x415/n/cw/ec/134287/city-exterior-left-rear-three-quarter.jpeg?isig=0&q=80"
+      "https://images.autox.com/uploads/2023/03/Honda-City-Facelift-Launch-500x261.jpg",
+      "https://imgd.aeplcdn.com/642x361/n/cw/ec/143725/honda-city-front-view3.jpeg?isig=0&wm=4",
+      "https://imgd.aeplcdn.com/1280x720/n/cw/ec/167995/honda-city-left-front-three-quarter1.jpeg?isig=0",
+      "https://imgd.aeplcdn.com/664x374/n/cw/ec/134287/city-exterior-rear-view.jpeg?isig=0&q=80",
+      "https://cdn1.smartprix.com/rx-iHUXmbPKg-w420-h420/honda-city-sv-2024.webp"
     ]
   },
   {
@@ -47,8 +49,11 @@ let vehicleData = [
     ],
     "views360": [
       "https://spn-sta.spinny.com/blog/20221202123514/Toyota-Fortuner-1160x653.webp?compress=true&quality=80&w=1200&dpr=2.6",
-      "https://media.zigcdn.com/media/model/2025/Jun/model-extimg-1146308685_600x400.jpg",
-      "https://cms-assets.autoscout24.com/uaddx06iwzdz/4CaY003mpVj2XrKYqJXqIj/b7ae7a2d8427d3a6fb3c2b49267cccc2/toyota-fortuner-back.jpeg?w=1100"
+      "https://imgcdn.oto.com/large/gallery/exterior/38/894/toyota-fortuner-full-front-view-816269.jpg",
+      "https://imgcdn.oto.com/large/gallery/exterior/38/894/toyota-fortuner-full-rear-view-370057.jpg",
+      "https://cms-assets.autoscout24.com/uaddx06iwzdz/4CaY003mpVj2XrKYqJXqIj/b7ae7a2d8427d3a6fb3c2b49267cccc2/toyota-fortuner-back.jpeg?w=1100",
+      "https://imgcdn.oto.com/large/gallery/exterior/38/894/toyota-fortuner-side-view-283280.jpg",
+      "https://imgcdn.oto.com/large/gallery/roadtest/38/894/toyota-fortuner-front-side-view-996822.jpg"
     ]
   },
   {
@@ -70,8 +75,10 @@ let vehicleData = [
     ],
     "views360": [
       "https://images.hindustantimes.com/auto/img/2024/07/26/600x338/Creta_3_1705469941498_1721984409750.jpg",
-      "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/creta-n-line/Interior/pc/front.jpg",
-      "https://jsvhyundai.com/public/assets/admin/images/gallery/Hyundai%20Creta%20Price.jpg"
+      "https://cdn-s3.autocarindia.com/hyundai/creta/500_4246.JPG?w=640",
+      "https://jsvhyundai.com/public/assets/admin/images/gallery/Hyundai%20Creta%20Price.jpg",
+      "https://imgd.aeplcdn.com/664x374/n/cw/ec/106815/creta-exterior-rear-view.jpeg?isig=0&q=80",
+      "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/creta-n-line/Interior/pc/front.jpg"
     ]
   },
   {
@@ -92,9 +99,12 @@ let vehicleData = [
       "https://imgd.aeplcdn.com/664x374/n/cw/ec/159099/swift-exterior-right-rear-three-quarter.jpeg?isig=0&q=80"
     ],
     "views360": [
-      "https://imgd-ct.aeplcdn.com/664x415/n/cw/ec/159099/swift-exterior-left-front-three-quarter-26.jpeg?isig=0&q=80",
+      
+      "https://images.drivespark.com/ph-big/2024/05/2024-maruti-suzuki-swift-review_171583785860.jpg",
+      "https://imgd-ct.aeplcdn.com/664x415/n/cw/ec/159099/swift-exterior-front-view.jpeg?isig=0&q=80",
       "https://imgd.aeplcdn.com/664x374/n/cw/ec/159099/swift-exterior-right-side-view.jpeg?isig=0&q=80",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/159099/swift-exterior-right-rear-three-quarter.jpeg?isig=0&q=80"
+      "https://imgd.aeplcdn.com/664x374/n/cw/ec/159099/swift-exterior-right-rear-three-quarter.jpeg?isig=0&q=80",
+   "https://imgd-ct.aeplcdn.com/664x415/n/cw/ec/159099/swift-exterior-left-rear-three-quarter.jpeg?isig=0&q=80"
     ]
   },
   {
@@ -110,14 +120,19 @@ let vehicleData = [
     "features": ["iDrive 8 System","Harman Kardon Sound","Heated Seats","Panoramic Sunroof","Wireless Charging","Head-Up Display","Driving Assistant Pro","Parking Assistant","Live Cockpit Pro","M Sport Package"],
     "safety": ["8 Airbags","ABS + DSC","Active Cruise Control","Lane Departure Warning","Collision Warning + Braking"],
     "images": [
+
       "https://mediapool.bmwgroup.com/cache/P9/202405/P90549624/P90549624-the-new-bmw-330i-sedan-exterior--interior-05-2024-600px.jpg",
       "https://news-site-za.s3.af-south-1.amazonaws.com/images/2024/05/2024-3er-1.jpg",
       "https://assets.meinauto.de/image/upload/v1716974134/website/pics/landingpages/news/2024-05/P90549622_highRes_the-new-bmw-330i-sed.jpg"
     ],
     "views360": [
+      
       "https://mediapool.bmwgroup.com/cache/P9/202405/P90549624/P90549624-the-new-bmw-330i-sedan-exterior--interior-05-2024-600px.jpg",
-      "https://news-site-za.s3.af-south-1.amazonaws.com/images/2024/05/2024-3er-1.jpg",
-      "https://assets.meinauto.de/image/upload/v1716974134/website/pics/landingpages/news/2024-05/P90549622_highRes_the-new-bmw-330i-sed.jpg"
+      "https://imgd-ct.aeplcdn.com/664x415/n/cw/ec/198567/3-series-exterior-front-view.jpeg?isig=0&q=80",
+      "https://www.netcarshow.com/BMW-3-Series_Sedan-2025-Rear_Three-Quarter.b4a8dfb8.jpg",
+      "https://news-site-za.s3.af-south-1.amazonaws.com/images/2024/05/2024-3er-1.jpg"
+     
+    
     ]
   },
   {
@@ -139,8 +154,9 @@ let vehicleData = [
     ],
     "views360": [
       "https://imgd.aeplcdn.com/370x208/n/cw/ec/176745/tata-nexon-right-front-three-quarter0.jpeg?isig=0&q=80",
-      "https://cdn-s3.autocarindia.com/Tata/nexon/_BE07493.JPG?w=640&q=75",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/141867/nexon-facelift-exterior-left-rear-three-quarter.jpeg?isig=0&q=80"
+      "https://imgd.aeplcdn.com/664x374/n/cw/ec/41645/nexon-exterior-right-side-view.jpeg?q=80",
+      "https://imgd.aeplcdn.com/664x374/n/cw/ec/141867/nexon-facelift-exterior-left-rear-three-quarter.jpeg?isig=0&q=80",
+      "https://cdn-s3.autocarindia.com/Tata/nexon/_BE07493.JPG?w=640&q=75"
     ]
   }
 ];
