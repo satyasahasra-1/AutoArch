@@ -18,16 +18,25 @@ let vehicleData = [
     "features": ["Sunroof","Apple CarPlay","Android Auto","LED Headlights","Cruise Control","Rear Camera","Climate Control","Push Start","Wireless Charging","Ventilated Seats"],
     "safety": ["6 Airbags","ABS + EBD","Lane Watch Camera","Vehicle Stability Assist","Hill Start Assist"],
     "images": [
-      "https://imagecdnsa.zigwheels.ae/large/gallery/exterior/14/131/honda-city-front-angle-low-view-538576.jpg?tr=w-500,h-333",
-      "https://imgd-ct.aeplcdn.com/664x415/n/cw/ec/134287/city-exterior-right-front-three-quarter-2.png?isig=0&q=80",
-      "https://imgd-ct.aeplcdn.com/664x415/n/cw/ec/134287/city-exterior-left-rear-three-quarter.jpeg?isig=0&q=80"
+      "images/Honda City-01.jpeg",
+      "images/Honda City-04.jpeg",
+      "images/Honda City-07.jpeg"
     ],
     "views360": [
-      "https://images.autox.com/uploads/2023/03/Honda-City-Facelift-Launch-500x261.jpg",
-      "https://imgd.aeplcdn.com/642x361/n/cw/ec/143725/honda-city-front-view3.jpeg?isig=0&wm=4",
-      "https://imgd.aeplcdn.com/1280x720/n/cw/ec/167995/honda-city-left-front-three-quarter1.jpeg?isig=0",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/134287/city-exterior-rear-view.jpeg?isig=0&q=80",
-      "https://cdn1.smartprix.com/rx-iHUXmbPKg-w420-h420/honda-city-sv-2024.webp"
+      "images/Honda City-01.jpeg",
+      "images/Honda City-02.jpeg",
+      "images/Honda City-03.jpeg",
+      "images/Honda City-04.jpeg",
+      "images/Honda City-05.jpeg",
+      "images/Honda City-06.jpeg",
+      "images/Honda City-07.jpeg",
+      "images/Honda City-08.jpeg",
+      "images/Honda City-09.jpeg",
+      "images/Honda City-10.jpeg",
+      "images/Honda City-11.jpeg",
+      "images/Honda City-12.jpeg",
+      "images/Honda City-13.jpeg",
+      "images/Honda City-14.jpeg"
     ]
   },
   {
@@ -43,17 +52,26 @@ let vehicleData = [
     "features": ["4x4 Drive","Panoramic Sunroof","9-inch Touchscreen","360° Camera","Wireless Charging","Ventilated Seats","Ambient Lighting","Power Tailgate","Heads-Up Display","8 Airbags"],
     "safety": ["8 Airbags","ABS + EBD","Vehicle Stability Control","Hill Descent Control","Trailer Sway Control"],
     "images": [
-      "https://spn-sta.spinny.com/blog/20221202123514/Toyota-Fortuner-1160x653.webp?compress=true&quality=80&w=1200&dpr=2.6",
-      "https://media.zigcdn.com/media/model/2025/Jun/model-extimg-1146308685_600x400.jpg",
-      "https://cms-assets.autoscout24.com/uaddx06iwzdz/4CaY003mpVj2XrKYqJXqIj/b7ae7a2d8427d3a6fb3c2b49267cccc2/toyota-fortuner-back.jpeg?w=1100"
+      "images/fortuner-01.jpg",
+      "images/fortuner-03.jpeg",
+      "images/fortuner-08.jpeg"
     ],
     "views360": [
-      "https://spn-sta.spinny.com/blog/20221202123514/Toyota-Fortuner-1160x653.webp?compress=true&quality=80&w=1200&dpr=2.6",
-      "https://imgcdn.oto.com/large/gallery/exterior/38/894/toyota-fortuner-full-front-view-816269.jpg",
-      "https://imgcdn.oto.com/large/gallery/exterior/38/894/toyota-fortuner-full-rear-view-370057.jpg",
-      "https://cms-assets.autoscout24.com/uaddx06iwzdz/4CaY003mpVj2XrKYqJXqIj/b7ae7a2d8427d3a6fb3c2b49267cccc2/toyota-fortuner-back.jpeg?w=1100",
-      "https://imgcdn.oto.com/large/gallery/exterior/38/894/toyota-fortuner-side-view-283280.jpg",
-      "https://imgcdn.oto.com/large/gallery/roadtest/38/894/toyota-fortuner-front-side-view-996822.jpg"
+      "images/fortuner-01.jpg",
+      "images/fortuner-02.jpeg",
+      "images/fortuner-03.jpeg",
+      "images/fortuner-04.jpeg",
+      "images/fortuner-05.jpeg",
+      "images/fortuner-06.jpeg",
+      "images/fortuner-07.jpeg",
+      "images/fortuner-08.jpeg",
+      "images/fortuner-09.jpeg",
+      "images/fortuner-10.jpeg",
+      "images/fortuner-11.jpeg",
+      "images/fortuner-12.jpeg",
+      "images/fortuner-13.jpeg",
+      "images/fortuner-14.jpeg",
+      "images/fortuner-15.jpeg"
     ]
   },
   {
@@ -69,16 +87,28 @@ let vehicleData = [
     "features": ["Panoramic Sunroof","ADAS Suite","Bose Sound System","Dual Zone Climate","Wireless Charging","360° Camera","LED Headlights","Connected Car Tech","Drive Modes","Air Purifier"],
     "safety": ["6 Airbags","ABS + EBD","Electronic Stability Control","Forward Collision Warning","Lane Keep Assist"],
     "images": [
-      "https://images.hindustantimes.com/auto/img/2024/07/26/600x338/Creta_3_1705469941498_1721984409750.jpg",
-      "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/creta-n-line/Interior/pc/front.jpg",
-      "https://jsvhyundai.com/public/assets/admin/images/gallery/Hyundai%20Creta%20Price.jpg"
+      "images/creta-01.jpeg",
+      "images/creta-05.jpeg",
+      "images/creta-08.jpeg"
     ],
     "views360": [
-      "https://images.hindustantimes.com/auto/img/2024/07/26/600x338/Creta_3_1705469941498_1721984409750.jpg",
-      "https://cdn-s3.autocarindia.com/hyundai/creta/500_4246.JPG?w=640",
-      "https://jsvhyundai.com/public/assets/admin/images/gallery/Hyundai%20Creta%20Price.jpg",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/106815/creta-exterior-rear-view.jpeg?isig=0&q=80",
-      "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/creta-n-line/Interior/pc/front.jpg"
+      "images/creta-01.jpeg",
+      "images/creta-02.jpeg",
+      "images/creta-03.jpeg",
+      "images/creta-04.jpeg",
+      "images/creta-05.jpeg",
+      "images/creta-06.jpeg",
+      "images/creta-07.jpeg",
+      "images/creta-08.jpeg",
+      "images/creta-09.jpeg",
+      "images/creta-10.jpeg",
+      "images/creta-11.jpeg",
+      "images/creta-12.jpeg",
+      "images/creta-13.jpeg",
+      "images/creta-14.jpeg",
+      "images/creta-15.jpeg",
+      "images/creta-16.jpeg",
+      "images/creta-17.jpeg"
     ]
   },
   {
@@ -94,16 +124,29 @@ let vehicleData = [
     "features": ["SmartPlay Pro+","Apple CarPlay","Android Auto","LED Headlights","Keyless Entry","Push Start","Rear Camera","Auto AC","Drive Modes","Height Adj. Seatbelt"],
     "safety": ["2 Airbags","ABS + EBD","Electronic Brake Force","Rear Parking Sensors","Speed Alert System"],
     "images": [
-      "https://imgd-ct.aeplcdn.com/664x415/n/cw/ec/159099/swift-exterior-left-front-three-quarter-26.jpeg?isig=0&q=80",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/159099/swift-exterior-right-side-view.jpeg?isig=0&q=80",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/159099/swift-exterior-right-rear-three-quarter.jpeg?isig=0&q=80"
+      "images/swift-01.jpg",
+      "images/swift-04.jpeg",
+      "images/swift-07.jpeg"
     ],
     "views360": [
-      "https://images.drivespark.com/ph-big/2024/05/2024-maruti-suzuki-swift-review_171583785860.jpg",
-      "https://imgd-ct.aeplcdn.com/664x415/n/cw/ec/159099/swift-exterior-front-view.jpeg?isig=0&q=80",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/159099/swift-exterior-right-side-view.jpeg?isig=0&q=80",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/159099/swift-exterior-right-rear-three-quarter.jpeg?isig=0&q=80",
-      "https://imgd-ct.aeplcdn.com/664x415/n/cw/ec/159099/swift-exterior-left-rear-three-quarter.jpeg?isig=0&q=80"
+      "images/swift-01.jpg",
+      "images/swift-02.jpeg",
+      "images/swift-03.jpeg",
+      "images/swift-04.jpeg",
+      "images/swift-05.jpeg",
+      "images/swift-06.jpeg",
+      "images/swift-07.jpeg",
+      "images/swift-08.jpeg",
+      "images/swift-09.jpeg",
+      "images/swift-10.jpeg",
+      "images/swift-11.jpeg",
+      "images/swift-12.jpeg",
+      "images/swift-13.jpeg",
+      "images/swift-14.jpeg",
+      "images/swift-15.jpeg",
+      "images/swift-16.jpeg",
+      "images/swift-17.jpeg",
+      "images/swift-18.jpeg"
     ]
   },
   {
@@ -119,16 +162,28 @@ let vehicleData = [
     "features": ["iDrive 8 System","Harman Kardon Sound","Heated Seats","Panoramic Sunroof","Wireless Charging","Head-Up Display","Driving Assistant Pro","Parking Assistant","Live Cockpit Pro","M Sport Package"],
     "safety": ["8 Airbags","ABS + DSC","Active Cruise Control","Lane Departure Warning","Collision Warning + Braking"],
     "images": [
-      "https://mediapool.bmwgroup.com/cache/P9/202405/P90549624/P90549624-the-new-bmw-330i-sedan-exterior--interior-05-2024-600px.jpg",
-      "https://news-site-za.s3.af-south-1.amazonaws.com/images/2024/05/2024-3er-1.jpg",
-      "https://assets.meinauto.de/image/upload/v1716974134/website/pics/landingpages/news/2024-05/P90549622_highRes_the-new-bmw-330i-sed.jpg"
-    ],
+      "images/bmw-01.jpeg",
+      "images/bmw-05.jpeg",
+      "images/bmw-07.jpeg"
+    ],   
     "views360": [
-      "https://mediapool.bmwgroup.com/cache/P9/202405/P90549624/P90549624-the-new-bmw-330i-sedan-exterior--interior-05-2024-600px.jpg",
-      "https://imgd-ct.aeplcdn.com/664x415/n/cw/ec/198567/3-series-exterior-front-view.jpeg?isig=0&q=80",
-      "https://www.netcarshow.com/BMW-3-Series_Sedan-2025-Rear_Three-Quarter.b4a8dfb8.jpg",
-      "https://news-site-za.s3.af-south-1.amazonaws.com/images/2024/05/2024-3er-1.jpg"
+      "images/bmw-01.jpeg",
+      "images/bmw-02.jpeg",
+      "images/bmw-03.jpeg",
+      "images/bmw-04.jpeg",
+      "images/bmw-05.jpeg",
+      "images/bmw-06.jpeg",
+      "images/bmw-07.jpeg",
+      "images/bmw-08.jpeg",
+      "images/bmw-09.jpeg",
+      "images/bmw-10.jpeg",
+      "images/bmw-11.jpeg",
+      "images/bmw-12.jpeg",
+      "images/bmw-13.jpeg",
+      "images/bmw-14.jpeg",
+      "images/bmw-15.jpeg"
     ]
+      
   },
   {
     "company": "Tata", "model": "Nexon", "year": "2024",
@@ -143,15 +198,29 @@ let vehicleData = [
     "features": ["10.25\" Touchscreen","JBL Sound System","Sunroof","ADAS","Wireless Charging","360° Camera","Air Purifier","Ventilated Seats","Connected Car","Ira Voice Assistant"],
     "safety": ["6 Airbags","ABS + EBD","Electronic Stability Program","Hill Hold Control","Front Fog Lamps"],
     "images": [
-      "https://imgd.aeplcdn.com/370x208/n/cw/ec/176745/tata-nexon-right-front-three-quarter0.jpeg?isig=0&q=80",
-      "https://cdn-s3.autocarindia.com/Tata/nexon/_BE07493.JPG?w=640&q=75",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/141867/nexon-facelift-exterior-left-rear-three-quarter.jpeg?isig=0&q=80"
+      "images/nexon-01.jpg",
+      "images/nexon-05.jpeg",
+      "images/nexon-09.jpeg"
     ],
     "views360": [
-      "https://imgd.aeplcdn.com/370x208/n/cw/ec/176745/tata-nexon-right-front-three-quarter0.jpeg?isig=0&q=80",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/41645/nexon-exterior-right-side-view.jpeg?q=80",
-      "https://imgd.aeplcdn.com/664x374/n/cw/ec/141867/nexon-facelift-exterior-left-rear-three-quarter.jpeg?isig=0&q=80",
-      "https://cdn-s3.autocarindia.com/Tata/nexon/_BE07493.JPG?w=640&q=75"
+      "images/nexon-01.jpg",
+      "images/nexon-02.jpeg",
+      "images/nexon-03.jpeg",
+      "images/nexon-04.jpeg",
+      "images/nexon-05.jpeg",
+      "images/nexon-06.jpeg",
+      "images/nexon-07.jpeg",
+      "images/nexon-08.jpeg",
+      "images/nexon-09.jpeg",
+      "images/nexon-10.jpeg",
+      "images/nexon-11.jpeg",
+      "images/nexon-12.jpeg",
+      "images/nexon-13.jpeg",
+      "images/nexon-14.jpeg",
+      "images/nexon-15.jpeg",
+      "images/nexon-16.jpeg",
+      "images/nexon-17.jpeg",
+      "images/nexon-18.jpeg"
     ]
   }
 ];
@@ -163,7 +232,7 @@ let isDragging     = false;
 let startX         = 0;
 let autoRotate     = false;
 let autoInterval   = null;
-let activeImg, nextImg;
+let activeImg;
 let currentFrames  = [];
 
 /* ── DOM ── */
@@ -182,11 +251,27 @@ const dragHint       = document.getElementById('drag-hint');
 const autoRotateBtn  = document.getElementById('auto-rotate-btn');
 const keyboardHint   = document.getElementById('keyboard-hint');
 
+/* ── DOUBLE-BUFFER STATE ── */
+let imgA, imgB, activeLayer = 'A';
+
 /* ── INIT ── */
 function init() {
-  activeImg = document.getElementById('view360-img');
-  nextImg   = document.getElementById('view360-img-b');
-  console.log(`✅ ${vehicleData.length} vehicles ready`);
+  // Reuse existing <img id="view360-img"> as layer A
+  imgA = document.getElementById('view360-img');
+  imgA.id = 'view360-imgA';
+  imgA.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;object-fit:contain;transition:opacity 0.2s ease;opacity:1;pointer-events:none;';
+
+  // Create hidden layer B
+  imgB = document.createElement('img');
+  imgB.id  = 'view360-imgB';
+  imgB.alt = '360 view';
+  imgB.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;object-fit:contain;transition:opacity 0.2s ease;opacity:0;pointer-events:none;';
+  canvas.appendChild(imgB);
+
+  // Keep drag-hint on top
+  if (dragHint) { dragHint.style.zIndex = '10'; canvas.appendChild(dragHint); }
+
+  console.log(`✅ ${vehicleData.length} vehicles ready · smooth 360° active`);
 }
 
 /* ── SEARCH ── */
@@ -295,70 +380,119 @@ function renderVehicle(v) {
     ? v.images
     : ['https://via.placeholder.com/800x450/1e1e26/4a4855?text=No+Image'];
 
-  mainImg.src = imgs[0];
-  mainImg.alt = `${v.company} ${v.model}`;
   document.getElementById('img-badge').textContent = `${v.company} · ${v.model}`;
 
-  thumbStrip.innerHTML = '';
-  imgs.forEach((src, i) => {
-    const img = document.createElement('img');
-    img.src = src;
-    img.alt = `View ${i + 1}`;
-    if (i === 0) img.classList.add('active');
-    img.addEventListener('click', () => {
-      mainImg.style.opacity = '0';
-      setTimeout(() => { mainImg.src = src; mainImg.style.opacity = '1'; }, 200);
-      thumbStrip.querySelectorAll('img').forEach(t => t.classList.remove('active'));
-      img.classList.add('active');
-    });
-    thumbStrip.appendChild(img);
+  // ── GALLERY: stack all images in main-image-wrap, show/hide by index ──
+  // This works on file:// because images are in the DOM from the start,
+  // not dynamically assigned via src after page load.
+  const mainWrap = mainImg.parentElement;
+
+  // Remove any previously stacked gallery imgs (keep the badge overlay)
+  mainWrap.querySelectorAll('.gallery-slide').forEach(el => el.remove());
+
+  // Hide the original static <img> — we'll use our own stacked imgs
+  mainImg.style.display = 'none';
+
+  let activeGalleryIndex = 0;
+
+  const gallerySlides = imgs.map((src, i) => {
+    const slide = document.createElement('img');
+    slide.src       = src;
+    slide.alt       = `${v.company} ${v.model} view ${i + 1}`;
+    slide.className = 'gallery-slide';
+    slide.style.cssText = `
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      opacity: ${i === 0 ? '1' : '0'};
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    `;
+    mainWrap.appendChild(slide);
+    return slide;
   });
 
-  // Setup 360 frames
+  function switchGallery(index) {
+    gallerySlides[activeGalleryIndex].style.opacity = '0';
+    gallerySlides[index].style.opacity = '1';
+    activeGalleryIndex = index;
+  }
+
+  // Build thumbnail strip
+  thumbStrip.innerHTML = '';
+  imgs.forEach((src, i) => {
+    const thumb = document.createElement('img');
+    thumb.src = src;
+    thumb.alt = `View ${i + 1}`;
+    if (i === 0) thumb.classList.add('active');
+    thumb.addEventListener('click', () => {
+      switchGallery(i);
+      thumbStrip.querySelectorAll('img').forEach(t => t.classList.remove('active'));
+      thumb.classList.add('active');
+    });
+    thumbStrip.appendChild(thumb);
+  });
+
+  // ── 360°: inject ALL frame <img> tags into canvas DOM ──
+  // Removes reliance on new Image() preloading which fails on file://
   currentFrames = v.views360 && v.views360.length ? v.views360 : imgs;
   currentFrame  = 0;
+  activeLayer   = 'A';
 
-  // Reset layers
-  activeImg = document.getElementById('view360-img');
-  nextImg   = document.getElementById('view360-img-b');
-  activeImg.classList.add('active');
-  nextImg.classList.remove('active');
-  nextImg.src = '';
+  // Remove old frame imgs (keep imgA, imgB, dragHint)
+  canvas.querySelectorAll('.frame-slide').forEach(el => el.remove());
 
-  // Preload all frames in background
-  currentFrames.forEach(src => { const p = new Image(); p.src = src; });
+  // Inject every frame as a hidden <img> so browser loads them from DOM
+  const frameSlides = currentFrames.map((src, i) => {
+    const fi = document.createElement('img');
+    fi.src       = src;
+    fi.alt       = `360 frame ${i + 1}`;
+    fi.className = 'frame-slide';
+    fi.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;pointer-events:none;display:block;';
+    canvas.insertBefore(fi, imgA); // insert behind the crossfade layers
+    return fi;
+  });
 
-  updateFrame(0);
+  // Override updateFrame to use frameSlides instead of setting src on imgA/imgB
+  window._frameSlides = frameSlides;
+
+  // Reset double-buffer layers (make transparent — frameSlides do the display)
+  imgA.style.opacity = '0';
+  imgB.style.opacity = '0';
+  imgA.src = '';
+  imgB.src = '';
+
+  updateFrame(0, true);
 }
 
-/* ── 360 VIEWER ── */
-function updateFrame(index) {
+/* ── 360 VIEWER — DOM-stack approach (works on file://) ── */
+function updateFrame(index, instant = false) {
   if (!currentFrames.length) return;
   index = ((index % currentFrames.length) + currentFrames.length) % currentFrames.length;
+
+  const slides = window._frameSlides;
+  if (!slides || !slides.length) return;
+
+  const prev = currentFrame;
   currentFrame = index;
 
-  nextImg.src = currentFrames[index];
-
-  const doSwap = () => {
-    nextImg.classList.add('active');
-    activeImg.classList.remove('active');
-    const tmp = activeImg;
-    activeImg = nextImg;
-    nextImg   = tmp;
-  };
-
-  if (nextImg.complete && nextImg.naturalWidth > 0) {
-    doSwap();
+  if (instant) {
+    slides.forEach((s, i) => { s.style.transition = 'none'; s.style.opacity = i === index ? '1' : '0'; });
   } else {
-    nextImg.onload = doSwap;
+    slides[prev].style.transition = 'opacity 0.18s ease';
+    slides[prev].style.opacity    = '0';
+    slides[index].style.transition = 'opacity 0.18s ease';
+    slides[index].style.opacity    = '1';
   }
 
   // Progress bar
   rotationFill.style.width = ((index / currentFrames.length) * 100) + '%';
 
-  // Counter
-  const span = frameCounter ? frameCounter.querySelector('span') : null;
-  if (span) span.textContent = `Frame ${index + 1} / ${currentFrames.length}`;
+  // Frame counter
+  if (frameCounter) {
+    const spans = frameCounter.querySelectorAll('span');
+    if (spans[0]) spans[0].textContent = `Frame ${index + 1} / ${currentFrames.length}`;
+  }
 }
 
 function nextFrame() {
@@ -377,7 +511,7 @@ function startAutoRotate() {
   autoRotate = true;
   autoRotateBtn.classList.add('active');
   autoRotateBtn.querySelector('span').textContent = 'STOP';
-  autoInterval = setInterval(nextFrame, 120);
+  autoInterval = setInterval(nextFrame, 150);
 }
 
 function stopAutoRotate() {
@@ -421,9 +555,19 @@ canvas.addEventListener('touchend', () => { isDragging = false; });
 canvas.addEventListener('touchmove', e => {
   if (!isDragging) return;
   const diff = e.touches[0].clientX - startX;
-  if (Math.abs(diff) > 18) {
-    diff > 0 ? nextFrame() : prevFrame();
-    startX = e.touches[0].clientX;
+  if (Math.abs(diff) > 8) {
+    canvas.addEventListener('mousemove', e => {
+  if (!isDragging) return;
+
+  const diff = e.clientX - startX;
+  const framesToMove = Math.floor(diff / 5); // sensitivity
+
+  if (framesToMove !== 0) {
+    updateFrame(currentFrame + framesToMove);
+    startX = e.clientX;
+  }
+});
+  
   }
 }, { passive: true });
 
