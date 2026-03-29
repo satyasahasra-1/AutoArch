@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoArch — Vehicle Intelligence</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-logo">
+      <div class="logo-icon">A</div>
+      <div class="logo-text">Auto<span>Arch</span></div>
+    </div>
+    <div class="nav-tagline">Vehicle Intelligence Platform</div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">Precision Data · Immersive Views</div>
+      <h2 class="hero-title">Know Your<br /><em>Machine.</em></h2>
+      <p class="hero-subtitle">Deep-dive into full vehicle specifications, gallery views, and interactive 360° exploration.</p>
+    </div>
+  </section>
+
+  <!-- SEARCH -->
+  <section class="search-section">
+    <div class="search-container">
+      <div class="search-label">Search Database</div>
+      <div class="search-fields">
+        <div class="field-group">
+          <label for="company-input">Brand / Company</label>
+          <input type="text" id="company-input" placeholder="e.g. Honda, Toyota, BMW" autocomplete="off" />
+        </div>
+        <div class="field-group">
+          <label for="model-input">Model Name</label>
+          <input type="text" id="model-input" placeholder="e.g. City, Fortuner, Nexon" autocomplete="off" />
+        </div>
+        <button class="search-btn" id="search-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          SEARCH
+        </button>
+      </div>
+      <div class="search-suggestions">
+        <span class="suggestions-label">Try:</span>
+        <span class="suggestion-chip" data-query="Honda City">Honda City</span>
+        <span class="suggestion-chip" data-query="Toyota Fortuner">Toyota Fortuner</span>
+        <span class="suggestion-chip" data-query="Hyundai Creta">Hyundai Creta</span>
+        <span class="suggestion-chip" data-query="Maruti Swift">Maruti Swift</span>
+        <span class="suggestion-chip" data-query="BMW 3 Series">BMW 3 Series</span>
+        <span class="suggestion-chip" data-query="Tata Nexon">Tata Nexon</span>
+      </div>
+    </div>
+
+    <!-- Not Found -->
+    <div class="not-found" id="not-found">
+      <div class="not-found-icon">🔍</div>
+      <h3>Vehicle Not Found</h3>
+      <p>We couldn't find a match. Try a different brand or model name.</p>
+    </div>
+  </section>
+
+  <!-- VEHICLE DETAILS -->
+  <section class="vehicle-details" id="vehicle-details">
+    <div class="details-inner">
+
+      <!-- Header -->
+      <div class="vehicle-header">
+        <div class="vehicle-name-block">
+          <div class="eyebrow" id="v-company">—</div>
+          <h1 id="v-model">—</h1>
+          <div class="model-year" id="v-year"></div>
+        </div>
+        <div class="vehicle-price-block">
+          <div class="price-label">Ex-Showroom Price</div>
+          <div class="price-value" id="v-price">—</div>
+          <div class="price-note">*Prices vary by city &amp; variant</div>
+        </div>
+      </div>
+
+      <!-- Main grid -->
+      <div class="details-grid">
+
+        <!-- Images -->
+        <div class="image-section">
+          <div class="main-image-wrap">
+            <img id="main-vehicle-img" src="" alt="Vehicle" loading="lazy" />
+            <div class="img-overlay-badge" id="img-badge">—</div>
+          </div>
+          <div class="thumb-strip" id="thumb-strip"></div>
+        </div>
+
+        <!-- Specs -->
+        <div class="specs-section">
+          <div class="specs-card">
+            <div class="section-title">Core Specifications</div>
+            <div class="specs-grid">
+
+              <div class="spec-cell">
+                <span class="spec-key">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="10" rx="2"/><path d="M7 7V5M17 7V5M12 7V5"/></svg>
+                  Engine
+                </span>
+                <span class="spec-val" id="v-engine">—</span>
+              </div>
+
+              <div class="spec-cell">
+                <span class="spec-key">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4"/></svg>
+                  Mileage
+                </span>
+                <span class="spec-val highlight" id="v-mileage">—</span>
+              </div>
+
+              <div class="spec-cell">
+                <span class="spec-key">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                  Power
+                </span>
+                <span class="spec-val" id="v-power">—</span>
+              </div>
+
+              <div class="spec-cell">
+                <span class="spec-key">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10"/></svg>
+                  Torque
+                </span>
+                <span class="spec-val" id="v-torque">—</span>
+              </div>
+
+              <div class="spec-cell">
+                <span class="spec-key">Fuel Type</span>
+                <span class="spec-val" id="v-fuel">—</span>
+              </div>
+
+              <div class="spec-cell">
+                <span class="spec-key">Transmission</span>
+                <span class="spec-val" id="v-transmission">—</span>
+              </div>
+
+              <div class="spec-cell">
+                <span class="spec-key">Seating</span>
+                <span class="spec-val" id="v-seating">—</span>
+              </div>
+
+              <div class="spec-cell">
+                <span class="spec-key">Body Type</span>
+                <span class="spec-val" id="v-body">—</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Description -->
+          <div class="desc-card">
+            <div class="section-title">About</div>
+            <p class="desc-text" id="v-desc"></p>
+            <div class="tags-row" id="v-tags"></div>
+          </div>
+        </div>
+
+        <!-- Extra Details Row — full width -->
+        <div class="extra-details-row">
+          <div class="extra-card">
+            <div class="extra-icon">🏁</div>
+            <div class="extra-label">Top Speed</div>
+            <div class="extra-value accent" id="v-topspeed">—</div>
+          </div>
+          <div class="extra-card">
+            <div class="extra-icon">⚡</div>
+            <div class="extra-label">0–100 km/h</div>
+            <div class="extra-value accent" id="v-acceleration">—</div>
+          </div>
+          <div class="extra-card">
+            <div class="extra-icon">⛽</div>
+            <div class="extra-label">Fuel Tank</div>
+            <div class="extra-value" id="v-tank">—</div>
+          </div>
+          <div class="extra-card">
+            <div class="extra-icon">🔧</div>
+            <div class="extra-label">Kerb Weight</div>
+            <div class="extra-value" id="v-weight">—</div>
+          </div>
+          <div class="extra-card">
+            <div class="extra-icon">📐</div>
+            <div class="extra-label">Length</div>
+            <div class="extra-value" id="v-length">—</div>
+          </div>
+          <div class="extra-card">
+            <div class="extra-icon">🛞</div>
+            <div class="extra-label">Boot Space</div>
+            <div class="extra-value green" id="v-boot">—</div>
+          </div>
+          <div class="extra-card">
+            <div class="extra-icon">🌡️</div>
+            <div class="extra-label">Cooling</div>
+            <div class="extra-value" id="v-cooling">—</div>
+          </div>
+          <div class="extra-card">
+            <div class="extra-icon">🗓️</div>
+            <div class="extra-label">Warranty</div>
+            <div class="extra-value" id="v-warranty">—</div>
+          </div>
+        </div>
+
+        <!-- Features & Safety Row -->
+        <div class="features-row">
+
+          <!-- Key Features -->
+          <div class="features-card">
+            <div class="section-title">Key Features</div>
+            <div class="features-list" id="v-features"></div>
+          </div>
+
+          <!-- Safety -->
+          <div class="safety-card">
+            <div class="section-title">Safety Rating</div>
+            <div class="safety-rating">
+              <div class="stars" id="v-stars"></div>
+              <div>
+                <div class="rating-text" id="v-rating">—</div>
+                <div class="rating-sub">Global NCAP</div>
+              </div>
+            </div>
+            <div class="features-list" id="v-safety" style="margin-top:1rem;"></div>
+          </div>
+
+        </div>
+
+        <!-- 360° View -->
+        <div class="view360-section">
+          <div class="view360-header">
+            <div class="view360-title">
+              360° View <span class="badge-360">INTERACTIVE</span>
+            </div>
+            <div class="view360-controls">
+              <button class="ctrl-btn" id="btn-prev" title="Previous (←)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+              </button>
+              <button class="ctrl-btn auto-rotate-btn" id="auto-rotate-btn" title="Auto rotate (Space)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38"/></svg>
+                <span>AUTO</span>
+              </button>
+              <button class="ctrl-btn" id="btn-next" title="Next (→)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Image stage -->
+          <div class="view360-canvas" id="view360-canvas">
+            <img id="view360-img" src="" alt="360 view" />
+            <div class="drag-hint" id="drag-hint">← Drag to rotate →</div>
+          </div>
+
+          <div class="rotation-bar"><div class="rotation-fill" id="rotation-fill"></div></div>
+          <div class="frame-counter" id="frame-counter">
+            <span>Front · 1/5</span>
+            <span>Drag · Arrow keys · Space</span>
+          </div>
+        </div>
+
+      </div><!-- /details-grid -->
+    </div><!-- /details-inner -->
+  </section>
+
+  <!-- KEYBOARD HINT -->
+  <div class="keyboard-hint" id="keyboard-hint">
+    <kbd>←</kbd> <kbd>→</kbd> Rotate &nbsp;·&nbsp; <kbd>Space</kbd> Auto-spin
+  </div>
+
+  <!-- LOADING -->
+  <div class="loading-overlay" id="loading-overlay">
+    <div class="loader-ring"></div>
+    <div class="loader-text">SCANNING DATABASE</div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Auto<span>Arch</span></div>
+    <div class="footer-note">Vehicle Intelligence Platform · Data sourced for demonstration</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
